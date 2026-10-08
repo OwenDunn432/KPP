@@ -1,73 +1,89 @@
+:root {
+    --primary_background_color: darkgray;
+    --secondary_background_color: gray;
+    --card_color: white;
+}
+
 /* STYLES */ 
 body {
     margin: 0;
-    font-family: "Inter";
-    height: auto;
 }
 
 /* HEADER */
 .header {
+    height: 15vh;
+    
+    position: sticky;
+    top: 0;
+
     display: flex;
-    padding: 2.5%;
-    padding-left: 10%;
-    padding-right: 10%;
     justify-content: center;
-    border: 0px;
-    border-bottom: 2px;
-    border-style: solid;
+    align-items: center;
+    
+    background-color: var(--secondary_background_color);
+    box-shadow: 0px 3px 15px -2px #00000059;
 }
 
 #logo_img {
     
 }
 
-.nav {
+/* HERO */
+.hero {
+    width: 100vw;
+    height: 75vh;
+
     display: flex;
-    padding: 2.5%;
-    text-align: center;
-    justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
+    justify-content: center;
+    align-items: center;
 }
 
 /* AWARDS CATEGORIES */
-.body {
-    margin-top: 1.5%;
-    margin-left: 15%;
-    margin-right: 15%;
+.main {
+    margin-top: 2.5%;
+    margin-left: 22.5%; 
+    margin-right: 22.5%;
+    margin-bottom: 0;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.award_body {
+.award_card {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+
     display: flex;
-    outline: 0px; 
-    outline-offset: 4px;
-    outline-style: solid;
+    gap: 2.5%;
+
+    border-bottom: solid black;
+    background-color: var(--card_color);
+}
+
+.right_aligned_card {
+    flex-direction: row-reverse;
 }
 
 .award_img {
-    width: 30%;
+    width: 17.5vw;
     height: auto;
-    border-radius: 0;
 }
 
 .award_txt {
     display: flex;
     flex-direction: column;
-    margin-top: 1.5%;
-    margin-left: 2%;
-    margin-right: 5%;
 }
 
 .award_name {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    border-bottom: 2px solid;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+
+    font-size: 2vw;
+
+    border-bottom: solid black;
 }
 
 .award_description {
-    font-size: 1rem;
-
-    margin-top: 1.5%;
+    font-size: 1vw;
 }
