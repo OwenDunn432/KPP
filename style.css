@@ -1,12 +1,21 @@
 :root {
-    --primary_background_color: darkgray;
-    --secondary_background_color: gray;
-    --card_color: white;
+    --primary_background_color: #333f58;
+    --header_color: #4a7a96;
+    --card_color: #4a7a96;
+    --border_color: #fbbbad;
+    --outline_color: #fbbbad;
+    --shadow_color: ##06060e60;
+    --font_color_main: #fbbbad;
+    --font_color_secondary: #292831;
 }
 
 /* STYLES */ 
 body {
     margin: 0;
+    
+    font-family: "Inter";
+
+    background-color: var(--primary_background_color);
 }
 
 /* HEADER */
@@ -19,9 +28,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border-bottom: solid var(--outline_color);
     
-    background-color: var(--secondary_background_color);
-    box-shadow: 0px 3px 15px -2px #00000059;
+    background-color: var(--header_color);
 }
 
 #logo_img {
@@ -50,13 +60,20 @@ body {
 }
 
 .award_card {
+    margin-top: 3%;
+    padding: 2.5%;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
+
+    border-radius: 20px;
 
     display: flex;
     gap: 2.5%;
 
-    border-bottom: solid black;
+    border-bottom: solid;
+    border-right: solid;
+    border-color: var(--border_color);
+    border-width: 5px;
     background-color: var(--card_color);
 }
 
@@ -67,6 +84,12 @@ body {
 .award_img {
     width: 17.5vw;
     height: auto;
+
+    outline: solid var(--outline_color);
+    outline-offset: 2.5px;
+    outline-width: 2.5px;
+
+    border-radius: 20px;
 }
 
 .award_txt {
@@ -80,10 +103,72 @@ body {
     padding-bottom: 1rem;
 
     font-size: 2vw;
+    color: var(--font_color_main);
 
-    border-bottom: solid black;
+    border-bottom: solid var(--border_color);
 }
 
 .award_description {
     font-size: 1vw;
+    color:var(--font_color_secondary);
+}
+
+/* MOBILE */
+@media only screen and (max-width: 767px) {
+
+    /* HEADER */
+    .header {
+        height: 15vh;
+    }
+
+    /* HERO */
+    .hero {
+        height: 50vh;
+    }
+
+    /* AWARDS CATEGORIES */
+    .main {
+        margin-top: 0vh;
+        margin-left: 1vw; 
+        margin-right: 1vw;
+        margin-bottom: 0;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .award_card {
+        margin: 7.5vw;
+        padding: 3vw;
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right_aligned_card {
+        flex-direction: column;
+    }
+
+    .award_img {
+        margin-top: 3vh;
+        width: 65vw;
+    }
+
+    .award_txt {
+        margin: 5vw;
+    }
+
+    .award_name {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 0.5rem;
+
+        font-size: 7vw;
+
+        border-bottom: solid var(--border_color);
+    }
+
+    .award_description {
+        font-size: 4vw;
+    }
 }
