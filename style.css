@@ -1,11 +1,6 @@
-/*
-Late night bath palette: https://lospec.com/palette-list/late-night-bath
-*/
-
 /* STYLES */ 
 body {
     margin: 0;
-    background: #0e0e0e;
     font-family: "Inter";
     height: auto;
 }
@@ -17,11 +12,9 @@ body {
     padding-left: 10%;
     padding-right: 10%;
     justify-content: center;
-    background-color: #3df9ea;
     border: 0px;
     border-bottom: 2px;
     border-style: solid;
-    border-color: #3df9ea;
 }
 
 #logo_img {
@@ -46,13 +39,9 @@ body {
 
 .award_body {
     display: flex;
-
     outline: 0px; 
     outline-offset: 4px;
-    outline-color: #5433be;
     outline-style: solid;
-    
-    background-color: #5433be;
 }
 
 .award_img {
@@ -70,16 +59,14 @@ body {
 }
 
 .award_name {
-    color: #ffc4b8;
     font-size: 3rem;
     font-weight: bold;
     margin: 0;
     padding: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid;
 }
 
 .award_description {
-    color: #46425e;
     font-size: 1rem;
 
     margin-top: 1.5%;
