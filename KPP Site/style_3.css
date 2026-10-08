@@ -1,0 +1,223 @@
+/* =========================================
+   KPP — SIMPLE RETRO / MTV STYLE
+   ========================================= */
+
+:root {
+    --black: #111111;
+    --white: #f7f7f7;
+    --pink: #ff2b9a;
+    --cyan: #00d9ff;
+}
+
+
+/* -----------------------------------------
+   RESET
+   ----------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+
+    font-family: "Inter", sans-serif;
+
+    min-height: 100vh;
+}
+
+
+/* -----------------------------------------
+   HEADER
+   ----------------------------------------- */
+
+.header {
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--pink);
+
+    border-bottom: 8px solid var(--white);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Simple geometric accent */
+
+.header::before {
+    content: "";
+
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    background: var(--cyan);
+
+    right: -100px;
+    top: -150px;
+
+    transform: rotate(45deg);
+}
+
+
+/* -----------------------------------------
+   LOGO
+   ----------------------------------------- */
+
+#logo_img {
+    position: relative;
+    z-index: 1;
+
+    width: 250px;
+    max-width: 70%;
+
+    object-fit: contain;
+
+    filter: drop-shadow(6px 6px 0 var(--black));
+}
+
+
+/* -----------------------------------------
+   MAIN CONTENT
+   ----------------------------------------- */
+
+.body {
+    width: min(1000px, 90%);
+    margin: 80px auto;
+}
+
+
+/* -----------------------------------------
+   AWARD
+   ----------------------------------------- */
+
+.award_body {
+    display: grid;
+    grid-template-columns: 42% 58%;
+
+    background: var(--white);
+    color: var(--black);
+
+    border: 5px solid var(--white);
+
+    box-shadow: 10px 10px 0 var(--pink);
+}
+
+
+/* -----------------------------------------
+   IMAGE
+   ----------------------------------------- */
+
+.award_img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-right: 5px solid var(--black);
+
+    filter: saturate(1.15);
+}
+
+
+/* -----------------------------------------
+   TEXT
+   ----------------------------------------- */
+
+.award_txt {
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* -----------------------------------------
+   TITLE
+   ----------------------------------------- */
+
+.award_name {
+    margin-bottom: 25px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+
+    text-transform: uppercase;
+
+    color: var(--black);
+
+    text-shadow: 5px 5px 0 var(--cyan);
+}
+
+
+/* -----------------------------------------
+   DESCRIPTION
+   ----------------------------------------- */
+
+.award_description {
+    max-width: 600px;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: #333;
+}
+
+
+/* -----------------------------------------
+   MOBILE
+   ----------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .header {
+        height: 140px;
+    }
+
+    .body {
+        width: 85%;
+        margin: 60px auto;
+    }
+
+    .award_body {
+        grid-template-columns: 1fr;
+
+        box-shadow: 7px 7px 0 var(--pink);
+    }
+
+    .award_img {
+        height: 250px;
+        min-height: 250px;
+
+        border-right: none;
+        border-bottom: 5px solid var(--black);
+    }
+
+    .award_txt {
+        padding: 35px 30px 40px;
+    }
+
+    .award_name {
+        font-size: 3rem;
+    }
+
+    .award_description {
+        font-size: 0.95rem;
+    }
+}

@@ -2,19 +2,10 @@
 Late night bath palette: https://lospec.com/palette-list/late-night-bath
 */
 
-/* VARIABLES */
-:root {
-    --primary_color: #4a7a96;
-    --secondary_color: #46425e;
-    --accent_color: ;
-    --background_color: ;
-    --background_color_darker: ;
-}
-
 /* STYLES */ 
 body {
     margin: 0;
-    background: linear-gradient(to top, #5b5d70, #282d3c);
+    background: #0e0e0e;
     font-family: "Inter";
     height: auto;
 }
@@ -26,20 +17,24 @@ body {
     padding-left: 10%;
     padding-right: 10%;
     justify-content: center;
-    background-color:#282d3c;
+    background-color: #3df9ea;
     border: 0px;
     border-bottom: 2px;
     border-style: solid;
-    border-color: var(--primary_color);
-    box-shadow: 0px 13px 15px -3px rgba(246, 145, 151, 0.1);
+    border-color: #3df9ea;
 }
 
 #logo_img {
     
 }
 
-#vote_link {
-    color: black;
+.nav {
+    display: flex;
+    padding: 2.5%;
+    text-align: center;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /* AWARDS CATEGORIES */
@@ -54,11 +49,10 @@ body {
 
     outline: 0px; 
     outline-offset: 4px;
-    outline-color: #f69197;
+    outline-color: #5433be;
     outline-style: solid;
     
-    background-color: #446ba5;
-    box-shadow: 0px 0px 10px 4px rgba(246, 145, 151, 0.2);
+    background-color: #5433be;
 }
 
 .award_img {
@@ -81,6 +75,7 @@ body {
     font-weight: bold;
     margin: 0;
     padding: 0;
+    border-bottom: 2px solid black;
 }
 
 .award_description {
