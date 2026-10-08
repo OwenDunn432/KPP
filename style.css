@@ -1,20 +1,21 @@
 :root {
-    --primary_background_color: #333f58;
-    --header_color: #4a7a96;
-    --card_color: #4a7a96;
-    --border_color: #fbbbad;
-    --outline_color: #fbbbad;
-    --shadow_color: ##06060e60;
-    --font_color_main: #fbbbad;
-    --font_color_secondary: #292831;
+    --primary_background_color: #5b5d70; 
+    --header_color: #282d3c;
+    --card_color: #74838c;
+    --border_color: #282d3c;
+    --outline_color: #282d3c;
+    --shadow_color: #282d3c;
+    --font_color_main: #f8eebf;
+    --font_color_secondary: #282d3c;
 }
 
 /* STYLES */ 
 body {
     margin: 0;
     
-    font-family: "Inter";
+    font-family:  "Montserrat", "Inter", sans-serif;
 
+    background: linear-gradient(to bottom, var(--primary_background_color), var(--header_color));
     background-color: var(--primary_background_color);
 }
 
@@ -32,6 +33,7 @@ body {
     border-bottom: solid var(--outline_color);
     
     background-color: var(--header_color);
+    box-shadow: 0px 7px 16px 0px var(--shadow_color);
 }
 
 #logo_img {
@@ -113,6 +115,41 @@ body {
     color:var(--font_color_secondary);
 }
 
+/* MISC AWARD CARD */
+#misc_award_card {
+    flex-direction: column;
+}
+
+#misc_award_list {
+    padding-left: 0;
+    padding-right: 0;  
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    list-style-type: none;
+}
+
+.misc_award_name {
+    font-size: 2vw;
+    padding: 1vh;
+    color: var(--font_color_main);
+}
+
+.footer {
+    margin-top: 4vh;
+    width: 100vw;
+
+    height: 15vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: blue;
+}
+
 /* MOBILE */
 @media only screen and (max-width: 767px) {
 
@@ -170,5 +207,10 @@ body {
 
     .award_description {
         font-size: 4vw;
+    }
+
+    /* MISC AWARD CARD */
+    .misc_award_name {
+        font-size: 7vw;
     }
 }
