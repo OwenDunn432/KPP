@@ -218,12 +218,38 @@ h2 {
     background-color: var(--header_color);
 }
 
+/* COMMUNITY VOTE LINK */
+#vote_link {
+    z-index: 2;
+
+    position: fixed;
+    right: 1.5%;
+    top: 2.5%;
+
+    padding: 20px;
+
+    align-items: center;
+
+    font-weight: bold;
+    text-decoration: none;
+    font-size: large;
+    color: #2d2144;
+    font-style: italic;
+
+    background-color: #f7f7ea;
+    border: 3px solid var(--border_color);
+    box-shadow: 7px 7px 0 var(--shadow_color);
+    align-items: center;
+
+    transform: skew(-5deg);
+}
+
 /* MOBILE */
 @media only screen and (max-width: 767px) {
 
     /* HEADER */
     .header {
-        height: 15vh;
+        height: 10vh;
     }
 
     /* HERO */
@@ -279,5 +305,16 @@ h2 {
     /* MISC AWARD CARD */
     .misc_award_name {
         font-size: 7vw;
+    }
+
+    /* COMMUNITY VOTE LINK */
+    #vote_link {
+        right: 2.5%;
+        padding: 15px;
+
+        font-size: medium;
+
+        transform: translateY(87vh) skew(-5deg);
+        box-shadow: 3px 3px 0 var(--shadow_color);
     }
 }
