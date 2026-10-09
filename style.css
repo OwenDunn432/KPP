@@ -309,12 +309,14 @@ h2 {
 
     /* COMMUNITY VOTE LINK */
     #vote_link {
-        right: 2.5%;
+        position: fixed;
+        right: 3.5%;
+        top: auto;
+        bottom: 5%;
         padding: 15px;
 
         font-size: medium;
 
-        transform: translateY(87vh) skew(-5deg);
         box-shadow: 3px 3px 0 var(--shadow_color);
     }
 }
