@@ -1,0 +1,26 @@
+:root {
+    --primary_background_color: #4776c3; 
+    --header_color: #aaefd5;
+    --card_default_color: #f5554a;
+    --border_color: #2d2144;
+    --outline_color: #2d2144;
+    --accent_color: #2d2144;
+    --shadow_color: #2d214495;
+    --font_color_main: #f7f7ea;
+    --font_color_secondary: #2d2144;
+}
+
+.footer {
+    margin-top: 4vh;
+    width: 100%;
+
+    height: 15vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-top: solid var(--border_color);
+
+    background-color: var(--header_color);
+}

@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Montserrat", "Inter", sans-serif;
+
+    background: linear-gradient(to top, var(--primary_background_color), var(--header_color));
+    background-color: var(--primary_background_color);
+    height: 100vh;
+}
+
+h2 {
+    font-family: "Archivo Black";
+}
+
+.main {
+    flex: 1;
+}
+
+form {
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 5%;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+}

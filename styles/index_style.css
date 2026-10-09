@@ -28,30 +28,6 @@ h2 {
     font-family: "Archivo Black";
 }
 
-/* HEADER */
-.header {
-    z-index: 1;
-
-    height: 15vh;
-    width: 100%;
-    
-    position: sticky;
-    top: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-bottom: solid var(--outline_color);
-    
-    background-color: var(--header_color);
-    box-shadow: 0px 7px 0 var(--shadow_color);
-}
-
-#logo_img {
-    
-}
-
 /* HERO */
 .hero {
     width: 100%;
@@ -203,21 +179,6 @@ h2 {
     color: var(--font_color_main);
 }
 
-.footer {
-    margin-top: 4vh;
-    width: 100%;
-
-    height: 15vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    border-top: solid var(--border_color);
-
-    background-color: var(--header_color);
-}
-
 /* COMMUNITY VOTE LINK */
 #vote_link {
     z-index: 2;
@@ -246,11 +207,6 @@ h2 {
 
 /* MOBILE */
 @media only screen and (max-width: 767px) {
-
-    /* HEADER */
-    .header {
-        height: 10vh;
-    }
 
     /* HERO */
     .hero {
