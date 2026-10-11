@@ -28,6 +28,15 @@ h2 {
     font-family: "Archivo Black";
 }
 
+h3 {
+    font-family: "Archivo Black";
+    color: var(--font_color_main);
+}
+
+h3:nth-child(odd) {
+    color: var(--font_color_secondary);
+}
+
 /* HERO */
 .hero {
     width: 100%;
