@@ -1,0 +1,175 @@
+:root {
+    --black: black;
+    --dark_purple: #1a1044;
+    --purple: #5033db;
+    --pink: #ff00db;
+    --red: #ff5470;
+    --orange: #ffa582;
+    --blue: #a0fff0;
+    --white: white;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Montseratt", sans-serif;
+}
+
+/* HEADER */
+header {
+    padding: 4vh;
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--black);
+}
+
+main {
+    flex: 1;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0vh;
+
+    min-height: 82vh;
+    background: linear-gradient(to top, var(--orange) 0%, var(--red) 15%, var(--dark_purple) 65%, var(--black) 100%);
+    flex: 1;
+
+    border-bottom: solid 4px black;
+}
+
+.hero #title {
+    margin: 0;
+    font-family: "Pacifico", sans-serif;
+    font-size: 7vw;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.2;
+
+    color: white;
+    transform: rotate(-5deg);
+
+    color: #fff;
+}
+
+.hero #date {
+    margin-top: 5vh;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2vw;
+    color: white;
+}
+
+.hero #description {
+    color: white;
+    font-size: 1.1vw;
+}
+
+/* HERO BUTTONS */
+.hero .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    margin-top: 5vh;
+}
+
+.buttons button {
+    width: 12.5vw;
+    height: 1vh;
+    padding: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.3vw;
+    font-family: "Pacifico", "Montserrat";
+    color: white;
+
+    background: 0;
+    border: solid 4px white;
+    border-radius: 10px;
+}
+
+.buttons button:hover {
+    background: blue;
+}
+
+/* AWARDS */
+.awards_section {
+    padding: 0vh 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: var(--dark_purple);
+}
+
+.award_category {
+    color: white;
+}
+
+.category_title {
+    margin: 1rem 0;
+    font-weight: 100;
+    font-style: italic;
+    font-family: "Pacifico", "Montserrat", sans-serif;
+    font-size: 3.5rem;
+}
+
+.award_card {
+    padding: 2% 2.5%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    border: solid 6px white;
+    border-radius: 15px;
+}
+
+.award_card .award_info {
+    display: flex;
+    flex-direction: column;
+    padding: 0% 2.5%;
+}
+
+.award_card h2 {
+    margin: 0rem 0;
+    font-weight: 100;
+    font-family: "Pacifico", "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    border-bottom: solid 3px var(--white);
+}
+
+.award_card img {
+    width: 30%;
+    height: auto;
+    border: solid 4px white;
+    border-radius: 10px;
+}
+
+.award_card p {
+    padding: 2.5% 0%;
+    font-size: 1.25rem;
+}
+
+.award_card h3 {
+    font-weight: normal;
+}
+
+/* FOOTER */
+footer {
+    padding: 4vh;
+
+    background-color: blue;
+    border-top: solid 5px black;
+}
+

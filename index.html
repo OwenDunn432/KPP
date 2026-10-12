@@ -6,102 +6,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>KPP Awards</title>
 
-        <!-- STYLING -->
-        <link rel="stylesheet" href="styles/index_style.css">
-        <link rel="stylesheet" href="styles/header_style.css">
-        <link rel="stylesheet" href="styles/footer_style.css">
-        <!-- FONTS -->
+        <!-- STYLES -->
+        <link rel="stylesheet" href="index_style.css">
+
+        <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Yellowtail&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <!-- HEADER -->
-        <div class="header">
-            <a href="index.html"> <img id="logo_img" src="" alt="Logo image"> </a>
-        </div>
+        <header>
+            <img src="" alt="logo">
+        </header>
 
-        <a href="vote.html" id="vote_link">Community Vote</a>
+        <main>
 
-        <!-- HERO -->
-        <div class="hero">
-            <img id="hero_img" src="" alt="image">
-        </div>
-
-        <!-- MAIN -->
-        <div class="main">
+            <section class="hero">
+                    <h1 id="title">KPP AWARDS</h1>
+                    <h2 id="date">December 31, 2026</h2>
+                    <p id="description">
+                        This is a bunch of text to demonstrate what the KPPs are all about!
+                        Can you even believe all the texts we got going on here?
+                    </p>
+                    <div class="buttons">
+                        <button href="" id="awards_btn">Information</button>
+                        <button href="" id="awards_btn">Awards</button>
+                        <button href="" id="vote_btn">Community Vote</button>
+                    </div>
+            </section>
             
-            <!-- KPP AWARD -->
-            <div class="award_card">
-                <img class="award_img" src="Images/khasha_political.JPG" alt="Image associated with the KPP">
-
-                <div class="award_txt">
-                    <h2 class="award_name">Khasha Peace Prize</h2>
-                    <p class="award_description">
-                        A description of the award for the Khasha Peace Prize goes here.
-                    </p>
-                    <h3>2026 Winner: TBD</h3>
-                </div>
-            </div>
-
-            <!-- COLA AWARD -->
-            <div class="award_card right_aligned_card">
-                <img class="award_img" src="Images/test_img.jpg" alt="Image associated with the KPP">
-
-                <div class="award_txt">
-                    <h2 class="award_name">Cola Award</h2>
-                    <p class="award_description">
-                        A description of the award goes here. All the possible things someone would need to know about an award can be printed into this location.
-                        I am writing multiple words here to show how the text will look when it is longer than a single line. There are so many words here that it is
-                        almost crazy!
-                    </p>
-                    <h3>2026 Winner: TBD<h3>
-                </div>
-            </div>
-
-            <!-- KEVIN AWARD -->
-            <div class="award_card">
-                <img class="award_img" src="Images/kevin.JPG" alt="Image associated with the KPP">
-
-                <div class="award_txt">
-                    <h2 class="award_name">Kevin Le Pussmaxxer of the Year Award</h2>
-                    <p class="award_description">
-                        A description of the award goes here. 
-                    </p>
-                    <h3>2026 Winner: TBD<h3>
-                </div>
-            </div>
-
-            <!-- JEFF AWARD -->
-            <div class="award_card right_aligned_card">
-                <img class="award_img" src="Images/test_img.jpg" alt="Image associated with the KPP">
-
-                <div class="award_txt">
-                    <h2 class="award_name">Jeffrey Epstein Presents the in Memoriam Arth Samir "Truffle" Trivedi Racist Two-Timer of the Year Award</h2>
-                    <p class="award_description">
-                        A description of the award goes here. All the possible things someone would need to know about an award can be printed into this location.
-                        I am writing multiple words here to show how the text will look when it is longer than a single line. There are so many words here that it is
-                        almost crazy!
-                    </p>
-                    <h3>2026 Winner: TBD<h3>
-                </div>
-            </div>
-
-            <div class="award_card" id="misc_award_card">
-                <h2 class="award_name">Miscellaneous Awards</h2>
-                <ul id="misc_award_list">
-                    <li class="misc_award_name">Misc Award One</li>
-                    <li class="misc_award_name">Misc Award Two</li>
-                    <li class="misc_award_name">Misc Award Three</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer">
+            <section class="awards_section">
                 
-        </div>
+                <div class="award_category" id="featured">
+                    <h1 class="category_title">★★★ Featured Award ★★★</h1>
 
+                    <div class="award_card" id="kpp">
+                        <div class="award_info">
+                            <h2>Award Name</h2>
+                            <p class="award_description">
+                                This is a description of the award to be nominated. There should certainly be a little more 
+                                text here to flesh out the award description.
+                            </p>
+                            <h3>2026 Winner: TBD</h3>
+                        </div>
+                        <img class="award_img" src="test_img.jpg" alt="image">
+                    </div>
+                </div>
+            </section>  
+            
+        </main>
+
+        <footer>
+            
+        </footer>
     </body>
 </html>
