@@ -5,8 +5,42 @@
     --pink: #ff00db;
     --red: #ff5470;
     --orange: #ffa582;
-    --blue: #a0fff0;
+    --blue: #00f7ff;
     --white: white;
+
+    --text_shadow_orange: 
+        0 0 2px #ffa582,
+        0 0 5px #ffa582,
+        0 0 10px #ffa582,
+        0 0 20px #ffa582,
+        0 0 35px #ff8a60,
+        0 0 50px #95624d,
+        0 0 75px #825442;
+
+    --text_shadow_red:
+        0 0 5px #ff5470,
+        0 0 10px #ff5470,
+        0 0 20px #ff5470,
+        0 0 40px #ff5470,
+        0 0 80px #ff5470;
+    
+    --text_shadow_pink:
+        0 0 2px #ff45ad,
+        0 0 5px #ff45ad,
+        0 0 10px #ff45ad,
+        0 0 20px #ff45ad,
+        0 0 35px #e747a0,
+        0 0 50px #97416e,
+        0 0 75px #69354b;
+
+    --text_shadow_red:
+        0 0 2px #ff5470,
+        0 0 5px #ff5470,
+        0 0 10px #ff5470,
+        0 0 20px #ff5470,
+        0 0 35px #ff365e,
+        0 0 50px #a52d49,
+        0 0 75px #701e32;
 }
 
 /* BODY */
@@ -40,7 +74,7 @@ main {
 
 .hero #title {
     margin-top: 5%;
-    font-family: "Pacifico", sans-serif;
+    font-family: "Neonderthaw", "Pacifico", sans-serif;
     font-size: 7vw;
     font-style: italic;
     font-weight: 400;
@@ -50,6 +84,13 @@ main {
     transform: rotate(-5deg);
 
     color: #fff;
+
+    text-shadow:
+      0 0 5px #00f7ff,
+      0 0 10px #00f7ff,
+      0 0 20px #00f7ff,
+      0 0 40px #5033db,
+      0 0 80px #5033db;
 }
 
 .hero #date {
@@ -98,14 +139,24 @@ main {
 
 /* SECTION */
 .section_title {
-    margin: 0;
-    text-align: left;
-    font-family:
+    padding: 2.5%;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 100;
+    font-family: "Neonderthaw", "Pacifico", "Montserrat", sans-serif;
+    border-bottom: solid 4px white;
+    color: white;
+
+    text-shadow: var(--text_shadow_orange); 
 }
 
 /* AWARDS */
+.category_title {
+    color: white;
+}
+
 .awards_section {
-    padding: 0vh 25%;
+    padding: 0vh 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,12 +173,14 @@ main {
 .category_title {
     margin: 1rem 0;
     font-weight: 100;
-    font-style: italic;
-    font-family: "Pacifico", "Montserrat", sans-serif;
-    font-size: 3.5rem;
+    font-family: "Neonderthaw", "Pacifico", "Montserrat", sans-serif;
+    font-size: 4.5rem;
+
+    text-shadow: var(--text_shadow_pink); 
 }
 
 .award_card {
+    margin: 5vh 0vw;
     padding: 2% 2.5%;
     display: flex;
     flex-direction: row;
@@ -166,6 +219,26 @@ main {
 .award_card h3 {
     font-weight: normal;
     font-size: 1.5rem;
+}
+
+/* OTHER AWARDS SECTION */
+.award_category.other {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5vw;
+}
+
+.award_card.other {
+    display: flex;
+    flex-direction: column;
+}
+
+.award_card.other .award_img {
+    display: block;
+    width: 100%;             
+    height: auto;           
+    object-fit: contain;     
+    object-position: center;
 }
 
 /* FOOTER */
