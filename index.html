@@ -18,6 +18,8 @@
 
     <body>
 
+        
+
         <main>
 
             <section class="hero">
@@ -28,15 +30,53 @@
                         Can you even believe all the texts we got going on here?
                     </p>
                     <div class="buttons">
-                        <button href="" id="awards_btn">Information</button>
-                        <button href="" id="awards_btn">Awards</button>
-                        <button href="" id="vote_btn">Community Vote</button>
+                        <!-- INFO LINK -->
+                        <a href="#info">
+                            <button href="#info" id="awards_btn">Information</button>
+                        </a>
+
+                        <!-- AWARDS LINK -->
+                        <a href="#awards_section">
+                            <button href="#awards_Section" id="awards_btn">Awards</button>
+                        </a>
+                        
+                        <!-- COMMUNITY VOTE LINK -->
+                        <a href="community_vote_section">
+                            <button href="" id="vote_btn">Community Vote</button>
+                        </a>
                     </div>
             </section>
-            
-            <section class="awards_section">
+
+            <section class="info" id="info">
+                <h1 class="section_title">Information</h1>
+
+                <div class="info_body">
+
+                    <div class="info_card">
+                        <h2 class="info_question">About</h2>
+                        <p class="info_answer">
+                            Here is information on the KPPs. There is a short paragraph here to outline
+                            everything someone should need to know about such a prestigious event.
+                        </p>
+                    </div>
+
+                    <div class="info_card">
+                        <h2 class="info_question">Date</h2>
+                        <span class="info_answer">December 31, 2026</span>
+                    </div>
+
+                    <div class="info_card">
+                        <h2 class="info_question">Location</h2>
+                        <span class="info_answer">111 Place Rd SW, Calgary</span>
+                    </div>
+                </div>
                 
-                <h1 class="section_title">AWARDS</h1>
+
+            </section>
+            
+            <section class="awards_section" id="awards_section">
+                
+                <h1 class="section_title" id="awards">Awards</h1>
 
                 <!-- FEATURED AWARD -->
                 <h1 class="category_title">★★★ Featured Award ★★★</h1>
@@ -90,10 +130,10 @@
                             <h3>2026 Winner: TBD</h3>
                         </div>
                     </div>
-                    
+
                     <div class="award_card other">
+                        <img class="award_img" src="test_img.jpg" alt="image">
                         <div class="award_info">
-                            <img class="award_img" src="test_img.jpg" alt="image">
                             <h2>Award Name</h2>
                             <p class="award_description">
                                 This is a description of the award to be nominated. There should certainly be a little more 
@@ -103,7 +143,23 @@
                         </div>
                     </div>
                 </div>
-            </section>  
+
+                <!-- MISC AWARDS -->
+                <h1 class="category_title">Miscellaneous Awards</h1>
+
+                <div class="award_category misc">
+                    <ul class="misc_awards_list">
+                        <li>Misc Award One</li>
+                        <li>Misc Award Two</li>
+                        <li>Misc Award Three</li>
+                    </ul>
+                </div>
+
+            </section> 
+            
+            <section class="community_vote" id="community_vote_section">
+
+            </section>
 
         </main>
 

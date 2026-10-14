@@ -1,10 +1,11 @@
 :root {
     --black: black;
     --dark_purple: #1a1044;
-    --purple: #5033db;
-    --pink: #ff00db;
+    --purple: #462ebe;
+    --pink: #ff45ad;
     --red: #ff5470;
     --orange: #ffa582;
+    --yellow: #FFC857;
     --blue: #00f7ff;
     --white: white;
 
@@ -41,22 +42,50 @@
         0 0 35px #ff365e,
         0 0 50px #a52d49,
         0 0 75px #701e32;
+
+    --text_shadow_yellow:
+        0 0 2px #ffc857,
+        0 0 5px #ffc857,
+        0 0 10px #ffc857,
+        0 0 20px #ffc857,
+        0 0 35px #e6a83e,
+        0 0 50px #b8792e,
+        0 0 75px #805326;
+
+    --text_shadow_blue:
+        0 0 5px #00f7ff,
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        0 0 40px #5033db,
+        0 0 80px #5033db;
+
+    --secondary_title_text: "Pacifico", "Montserrat", sans-serif;
+    --body_text: "Montserrat", sans-serif;
 }
 
-/* BODY */
+/* #region BODY */
 body {
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: "Montseratt", sans-serif;
+    font-family: var(--body_text);
 }
 
 main {
     flex: 1;
 }
 
-/* HERO */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: progress;
+}
+/* #endregion */
+
+/* #region HERO */
 .hero {
     height: 100vh;
     width: 100%;
@@ -69,7 +98,7 @@ main {
     
     background: linear-gradient(to top, var(--orange) 0%, var(--red) 15%, var(--dark_purple) 65%, var(--black) 100%);
 
-    border-bottom: solid 4px black;
+    border-bottom: solid 4px var(--dark_purple);
 }
 
 .hero #title {
@@ -134,23 +163,70 @@ main {
 }
 
 .buttons button:hover {
-    background: blue;
+    cursor: pointer;
+    transform: scale(1.1);
+    color: var(--dark_purple);
+    background: var(--white);
 }
+/* #endregion */
 
-/* SECTION */
+/* #region SECTION */
 .section_title {
     padding: 2.5%;
     text-align: center;
     font-size: 5rem;
     font-weight: 100;
     font-family: "Neonderthaw", "Pacifico", "Montserrat", sans-serif;
-    border-bottom: solid 4px white;
+    border-bottom: solid 4px var(--white);
     color: white;
 
     text-shadow: var(--text_shadow_orange); 
 }
+/* #endregion */
 
-/* AWARDS */
+/* #region INFO */
+.info {
+    width: 100vw;
+    min-height: 100vh;
+    
+    background: linear-gradient(to bottom, var(--purple), var(--dark_purple))
+}
+
+.info .section_title {
+    margin: 0;
+    border: 0;
+}
+
+.info_body {
+    margin: 0 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info_card {
+    border-top: solid 2px white;
+    padding: 2rem;
+}
+
+.info_question {
+    margin: 0;
+    font-family: "Pacifico", "Montserrat", sans-serif;
+    font-size: 2rem;
+    text-shadow: 12px 12px 0px -10px rgba(0, 0, 0, 1);
+    font-weight: 100;
+    color: var(--white);
+}
+
+.info_answer {
+    font-family: var(--body_text);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+}
+
+/* #endregion */ 
+
+/* #region AWARDS */
 .category_title {
     color: white;
 }
@@ -186,8 +262,18 @@ main {
     flex-direction: row;
     color: white;
     font-family: "Montserrat", sans-serif;
-    border: solid 6px white;
+    border: solid 3px white;
     border-radius: 15px;
+}
+
+.award_card#kpp {
+    color: var(--white);
+    box-shadow: var(--text_shadow_yellow);
+}
+
+.award_card#community_vote {
+    color: var(--white);
+    box-shadow: var(--text_shadow_blue);
 }
 
 .award_info {
@@ -231,23 +317,53 @@ main {
 .award_card.other {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    box-shadow: var(--text_shadow_pink);
 }
 
-.award_card.other .award_img {
-    display: block;
-    width: 100%;             
+.award_card.other img {
+    width: 60%;             
     height: auto;           
-    object-fit: contain;     
-    object-position: center;
 }
 
-/* FOOTER */
+/* MISC AWARDS */
+.award_category.misc {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.misc_awards_list {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+    gap: 2rem;
+
+    margin: 0;
+    padding: 1rem;
+
+    font-family: "Montserrat";
+    font-size: 2.5rem;
+
+    border-top: solid 4px white;
+    border-bottom: solid 4px white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/* #endregion */
+
+/* #region FOOTER */
 footer {
     padding: 4vh;
 
     background-color: blue;
     border-top: solid 5px black;
 }
+/* #endregion */
 
 /* MOBILE */
 @media (max-width: 768px) {
@@ -289,6 +405,7 @@ footer {
         border: solid 2px white;
     }
 }
+
 
 
 
