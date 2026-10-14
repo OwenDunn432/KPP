@@ -167,6 +167,7 @@ a:hover {
     transform: scale(1.1);
     color: var(--dark_purple);
     background: var(--white);
+    transition: color 0.2s ease;
 }
 /* #endregion */
 
@@ -358,26 +359,78 @@ a:hover {
 
 /* #region FOOTER */
 footer {
-    padding: 4vh;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    background-color: blue;
-    border-top: solid 5px black;
+    text-align: center;
+    background-color: var(--dark_purple);
+    border-top: 3px solid var(--white);
+}
+
+footer h2 {
+    margin: 0;
+    font-family: "Pacifico", "Montserrat", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--white);
+}
+
+.footer_tagline {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--white);
+}
+
+.footer_links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer_links a {
+    color: var(--blue);
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer_links a:hover {
+    color: var(--pink);
+    cursor: pointer;
+}
+
+.footer_copyright {
+    margin: 0.5rem 0 0;
+    font-size: 0.8rem;
+    color: #b9b0d8;
 }
 /* #endregion */
 
-/* MOBILE */
+/* #region MOBILE */
 @media (max-width: 768px) {
+
+    /* #region HERO */
+    .hero {
+        padding-top: 0%;
+        display: flex;
+        align-items: center;
+    }
+
     .hero #title {
-        margin-top: 40%;
-        font-size: 11.5vw;
+        margin-top: 0;
+        text-align: center;
+        font-size: 13vw;
     }
 
     .hero #date {
-        font-size: 4vw;
+        font-size: 1rem;
     }
 
     .hero #description {
-        font-size: 2.5vw;
+        font-size: .7rem;
         font-weight: 700;
         margin: 0 15%;
     }
@@ -387,7 +440,7 @@ footer {
         display: flex;
         flex-direction: column;
         gap: auto;
-        margin: 0vh 3vw;
+        margin: 0vh 2vw;
         margin-top: 5vh;
     }
 
@@ -399,12 +452,200 @@ footer {
         justify-content: center;
         align-items: center;
 
-        font-size: 3.75vw;
+        font-size: 1rem;
         font-family: "Pacifico", "Montserrat";
 
         border: solid 2px white;
     }
+    /* #endregion */
+
+    /* #region SECTION */
+    .section_title {
+        font-size: 4rem;
+    }
+    /* #endregion */
+
+    /* #region INFO */
+    .info_body {
+        margin: 0vh 5%;
+    }
+
+    .info_card {
+        margin-top: 5%;
+        padding: 2.5% 0;
+        justify-content: left;
+    }
+
+    .info_question {
+        font-size: 2rem;
+    }
+
+    .info_answer {
+        font-size: 1rem;
+    }
+    /* #endregion */
+
+    /* #region AWARDS */
+    .awards_section {
+        padding: 0 7.5%;
+    }
+
+    .category_title {
+        font-size: 3rem;
+    }
+
+    .stars {
+        display: block;
+        line-height: 1.5;
+    }
+
+    .award_card {
+        width: 100%;
+        margin: 2rem 0;
+        padding: 1.25rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        text-align: center;
+        box-sizing: border-box;
+
+        border: 2px solid var(--white);
+        border-radius: 15px;
+    }
+
+    /* Image at the top */
+    .award_card img {
+        display: block;
+        order: -1;
+
+        width: 75%;
+        max-width: 18rem;
+        max-height: 15rem;
+        height: auto;
+
+        object-fit: contain;
+        border: 3px solid var(--white);
+        border-radius: 10px;
+    }
+
+    /* Center all award content */
+    .award_info {
+        width: 100%;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Award title */
+    .award_card h2 {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 0.75rem;
+
+        font-size: 1.75rem;
+        font-weight: 400;
+        line-height: 1.4;
+
+        text-align: center;
+        overflow-wrap: anywhere;
+
+        border-bottom: 2px solid var(--white);
+    }
+
+    /* Award description */
+    .award_card p {
+        margin: 0;
+        padding: 1rem 0;
+
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    /* Winner information */
+    .award_card h3 {
+        margin: 0.5rem 0 0;
+
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.5;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .award_category.other {
+        flex-direction: column;
+        margin: 5% 0;
+        gap: 5%;
+    }
+
+    .misc_awards_list {
+        font-size: 1.5rem;
+    }
+    /* #endregion */
+
+    /* #region FOOTER */
+    footer {
+        width: 100%;
+        padding: 2rem 1rem;
+        gap: 1rem;
+        box-sizing: border-box;
+    }
+
+    footer h2 {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .footer_tagline {
+        max-width: 22rem;
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .footer_links {
+        width: 100%;
+        max-width: 22rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.2rem;
+    }
+
+    .footer_links a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0.65rem 0.75rem;
+
+        font-size: 0.9rem;
+        line-height: 1;
+        text-align: center;
+
+        overflow-wrap: anywhere;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .footer_copyright {
+        margin: 0.25rem 0 0;
+        font-size: 0.75rem;
+        line-height: 1.6;
+    }
+    /* #endregion */
 }
+/* #endregion */
 
 
 
