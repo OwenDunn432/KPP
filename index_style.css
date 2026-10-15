@@ -289,13 +289,11 @@ a:hover {
 }
 
 .award_card#kpp {
-    color: var(--white);
-    box-shadow: var(--text_shadow_yellow);
+
 }
 
 .award_card#community_vote {
-    color: var(--white);
-    box-shadow: var(--text_shadow_blue);
+
 }
 
 .award_info {
@@ -340,7 +338,6 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: var(--text_shadow_pink);
 }
 
 .award_card.other img {
