@@ -1,7 +1,7 @@
 let currentUser = null;
 let hasSubmitted = false;
 
-// Handle Google authentification
+// Handle Google authentication
 function handleCredentialResponse(response) {
 
     console.log("Encoded JWT ID token: " + response.credential);
@@ -46,7 +46,7 @@ function onGoogleSignIn() {
 }
 
 // Events
-document.getElementById("submit-vote").addEventListener("click", async () => {
+document.getElementById("submit_vote_button").addEventListener("click", async () => {
     if (!currentUser || hasSubmitted) return;
 
     // Later, send currentUser.credential to your backend
@@ -58,5 +58,5 @@ document.getElementById("submit-vote").addEventListener("click", async () => {
     // Remove this assignment when implementing real submission.
     
     hasSubmitted = true;
-    document.getElementById("submit-vote").disabled = true;
+    document.getElementById("submit_vote_button").disabled = true;
 });
