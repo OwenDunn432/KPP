@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>KPP Awards</title>
 
+        <!-- SCRIPTS -->
+        <script src="https://accounts.google.com/gsi/client" async></script>
+        <script src="signin_test.js" defer></script>
+
         <!-- STYLES -->
         <link rel="stylesheet" href="index_style.css">
 
@@ -18,9 +22,20 @@
 
     <body>
 
-        
-
         <main>
+
+            <!-- GOOGLE SIGN IN -->
+            <section>
+                <!-- g_id_onload contains Google Identity Services settings -->
+                <div
+                id="g_id_onload"
+                data-auto_prompt="false"
+                data-callback="handleCredentialResponse"
+                data-client_id="336291443458-lq3q4knh3sat9r379a74noft29q1jor7.apps.googleusercontent.com"
+                ></div>
+                <!-- g_id_signin places the button on a page and supports customization -->
+                <div class="g_id_signin"></div>
+            </section>
 
             <section class="hero">
                     <h1 id="title">KPP AWARDS</h1>
@@ -146,7 +161,7 @@
 
                 <!-- MISC AWARDS -->
                 <h1 class="category_title">Miscellaneous Awards</h1>
-
+                
                 <div class="award_category misc">
                     <ul class="misc_awards_list">
                         <li>Misc Award One</li>
@@ -157,8 +172,22 @@
 
             </section> 
             
-            <section class="community_vote" id="community_vote_section">
+            <section class="community_vote_section">
+                <div>
+                    <h1 class="section_title">Community Vote</h1>
+                    <ul class="nominee_list">
+                        <button class="nominee_button"><li>Name One</li></button>
+                        <button class="nominee_button"><li>Name Two</li></button>
+                    </ul>
+                </div>
+                
+                <div class="submit_vote_div">
+                    <h2>Sign in with Google to Vote</h2>
+                    <!-- GOOGLE SIGN IN BUTTON GOES HERE -->
+                </div>
+                
 
+                <button class="submit_vote_button">Submit Vote</button>
             </section>
 
         </main>
