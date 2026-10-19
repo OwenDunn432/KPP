@@ -18,8 +18,8 @@ function handleCredentialResponse(response) {
     console.log("Email: ", profile.email);
     console.log("Google user ID: ", profile.sub);
 
-    // Handle sign in with supabase
-    handleGoogleSignIn(response)
+    // Handle sign in with supabase here
+    handleGoogleSignIn(response);
 
     // Update site
     //onGoogleSignIn(profile);
