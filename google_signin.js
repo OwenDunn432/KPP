@@ -18,8 +18,11 @@ function handleCredentialResponse(response) {
     console.log("Email: ", profile.email);
     console.log("Google user ID: ", profile.sub);
 
+    // Handle sign in with supabase
+    handleGoogleSignIn(response)
+
     // Update site
-    onGoogleSignIn(profile);
+    //onGoogleSignIn(profile);
 }
 
 function decodeJWT(token) {
