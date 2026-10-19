@@ -7,11 +7,14 @@
         <title>KPP Awards</title>
 
         <!-- SCRIPTS -->
-        <!-- Supabase scripts-->
+        <!-- Sets display based on current sign in status -->
+        <script src="handleVotingDisplay.js" defer></script>
+        <!-- Authorizes via Google and signs into supabase db -- must load first -->
+        <script src="handleVotingSubmission.js" defer></script>
+        <!-- Supabase connection scripts -->
         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-        <!-- Google sign in scripts -->
+        <!-- Loads Google Identity Services library-->
         <script src="https://accounts.google.com/gsi/client" async></script>
-        <script src="signin.js" defer></script>
 
         <!-- STYLES -->
         <link rel="stylesheet" href="index_style.css">
@@ -26,18 +29,15 @@
     <body>
 
         <main>
-
-            <!-- GOOGLE SIGN IN -->
-            <section>
-                <!-- g_id_onload contains Google Identity Services settings -->
-                <div
+            <!-- GOOGLE ID SERVICES SETTINGS -->
+            <div
                 id="g_id_onload"
                 data-auto_prompt="false"
                 data-callback="handleCredentialResponse"
                 data-client_id="336291443458-lq3q4knh3sat9r379a74noft29q1jor7.apps.googleusercontent.com"
-                ></div>
-            </section>
+            ></div>
 
+            <!-- DISPLAYED ON SCREEN -->
             <section class="hero">
                     <h1 id="title">KPP AWARDS</h1>
                     <h2 id="date">December 31, 2026</h2>
@@ -183,11 +183,11 @@
                     <div id="signed_out_state">
                         <!-- GOOGLE SIGN IN BUTTON -->
                         <div class="g_id_signin"></div>
-                        <p>Sign in with Google to vote.</p>
                     </div>
 
-                    <div id="signed_in_state" hidden>
-                        <button id="submit_vote_button">Submit vote</button>
+                    <div id="signed_in_state">
+                        <button id="submit_vote_button">VOTING BUTTON TEST</button>
+                        <!-- ADD SIGN OUT BUTTON HERE -->
                     </div>
                 </div>
             </section>
