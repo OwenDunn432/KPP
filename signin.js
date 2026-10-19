@@ -1,5 +1,5 @@
 // Supabase keys
-const SUPABASE_URL = "https://snwieeljkjlkntyioonh.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://snwieeljkjlkntyioonh.supabase.co";
 // This may be incorrect and need to be changed. This is the the URL found in APIs under settings
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_Rv9RiVF1iv8IOzKQqEOrlQ_yUwocFV2";
 
