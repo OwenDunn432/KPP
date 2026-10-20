@@ -8,3 +8,7 @@ Consider neon frames
 Main award make card have a shiny effect
 
 Add card flipping effect to other awards
+
+TO DO:
+1. The supabase URL was updated to be accurate but it is not showing up on the site. Try updating via github desktop and managing it that way.
+2. Need to continue setting up supabase for authentication and authorization.
