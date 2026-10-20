@@ -10,6 +10,9 @@ const supabaseClient = supabase.createClient(
   SUPABASE_PUBLISHABLE_KEY
 );
 
+// Voting nomination selection
+let selectedNomination = null;
+
 // ***********************************
 // HANDLE LOGIN
 // ***********************************
@@ -63,6 +66,12 @@ async function handleVoteSubmission() {
     return;
   }
 
+  // If no nominee is selected
+  if (nominee == null) {
+    alert("Please choose a nomination to vote.");
+    return;
+  }
+
   const vote = prepareVote(data);
 
   // Insert the vote into Supabase
@@ -91,7 +100,7 @@ function prepareVote(data) {
     voter_id: user.id,
     voter_name: metadata.full_name || metadata.name || "Unknown",
     voter_email: metadata.email || "Unknown",
-    voter_nomination: "Test Name",
+    voter_nomination: selectedNomination,
   };
 
   return vote;
@@ -111,6 +120,14 @@ document.getElementById("submit_vote_button").addEventListener("click", async ()
 document.getElementById("logout_button").addEventListener("click", async () => {
   await handleLogout();
 })
+
+// On select a vote
+document.querySelectorAll(".nominee").forEach(input => {
+  input.addEventListener("change", (event) => {
+    selectedNomination = event.target.value;
+    console.log(selectedNomination);
+  });
+});
 
 // ***********************************
 // DEBUGGING
