@@ -67,7 +67,7 @@ async function handleVoteSubmission() {
   }
 
   // If no nominee is selected
-  if (selectedNomination == null) {
+  if (selectedNomination === null) {
     alert("Please choose a nomination to vote.");
     return;
   }
