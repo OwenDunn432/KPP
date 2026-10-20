@@ -7,7 +7,7 @@ console.log("Running handle login display");
 async function assessSignInState() {
   console.log("Assessing the current sign in state.");
 
-  const { data, error } = await supabase.auth.getSession();
+  const { data, error } = await supabaseClient.auth.getSession();
 
   if (error) {
     console.error("Error checking session:", error);
@@ -30,6 +30,6 @@ assessSignInState();
 
 // React to sign-in, sign-out, and other auth state changes
 const { data: { subscription } } =
-  supabase.auth.onAuthStateChange((event, session) => {
+  supabaseClient.auth.onAuthStateChange((event, session) => {
     updatePageDisplay(!!session);
   });
