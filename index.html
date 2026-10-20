@@ -8,10 +8,10 @@
 
         <!-- SCRIPTS -->
         <!-- Sets display based on current sign in status -->
-        <script src="handleVotingDisplay.js" defer></script>
+        <script src="handleLoginDisplay.js" defer></script>
         <!-- Authorizes via Google and signs into supabase db -- must load first -->
         <script src="handleVotingSubmission.js" defer></script>
-        <!-- Supabase connection scripts -->
+        <!-- Supabase client library-->
         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
         <!-- Loads Google Identity Services library-->
         <script src="https://accounts.google.com/gsi/client" async></script>
@@ -176,18 +176,25 @@
             <section class="community_vote_section">
                 <div>
                     <h1 class="section_title">Community Vote</h1>
-                    <!-- NOMINEES GO HERE-->
+                    
+                    <h2 class="category_title">Nominees</h2>
+                    <select id="nominee_selection" name="nominee_selection">
+                        <option value="person_one">Person One</option>
+                        <option value="person_two">Person Two</option>
+                        <option value="person_three">Person Three</option>
+                    </select>
                 </div>
                 
                 <div class="submit_vote">
-                    <div id="signed_out_state">
+                    <div id="public_content">
                         <!-- GOOGLE SIGN IN BUTTON -->
                         <div class="g_id_signin"></div>
                     </div>
 
-                    <div id="signed_in_state">
-                        <button id="submit_vote_button">VOTING BUTTON TEST</button>
+                    <div id="private_content" hidden>
+                        <button id="submit_vote_button">Submit Vote</button>
                         <!-- ADD SIGN OUT BUTTON HERE -->
+                        <button id="logout_button">Logout</button>
                     </div>
                 </div>
             </section>

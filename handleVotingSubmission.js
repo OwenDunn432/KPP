@@ -1,14 +1,17 @@
-// Supabase keys
+// ***********************************
+// VARS
+// ***********************************
+
+// Supabase Keys
 const SUPABASE_URL = "https://snwieeljkjlkntyioonh.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_Rv9RiVF1iv8IOzKQqEOrlQ_yUwocFV2";
-
 const supabaseClient = supabase.createClient(
   SUPABASE_URL,
   SUPABASE_PUBLISHABLE_KEY
 );
 
 // ***********************************
-// HANDLE AUTHENTICATION
+// HANDLE LOGIN
 // ***********************************
 
 // Handles Google authentication upon signing in
@@ -32,6 +35,20 @@ async function handleSupabaseSignIn(response) {
 
   // On login success
   console.log("Succesfully authenticated through Google and signed into Supabase.");
+}
+
+// ***********************************
+// HANDLE LOG OUT
+// ***********************************
+async function handleLogout() {
+  const { error } = await supabase.auth.signOut();
+
+  if (error) {
+    console.error("Logout failed:", error.message);
+    return;
+  }
+
+  alert("You have been successfully logged out.");
 }
 
 // ***********************************
@@ -80,7 +97,6 @@ function prepareVote(data) {
   return vote;
 }
 
-
 // ***********************************
 // EVENTS
 // ***********************************
@@ -90,6 +106,11 @@ document.getElementById("submit_vote_button").addEventListener("click", async ()
   await handleVoteSubmission();
   document.getElementById("submit_vote_button").disabled = true;
 });
+
+// On click log out
+document.getElementById("logout_button").addEventListener("click", async () => {
+  await handleLogout();
+})
 
 // ***********************************
 // DEBUGGING
@@ -106,7 +127,6 @@ function consoleLogProfileInfo(response) {
 
 // Decodes the Google token for signing in with supabase
 function decodeJWT(token) {
-
   let base64Url = token.split(".")[1];
   let base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
   let jsonPayload = decodeURIComponent(
