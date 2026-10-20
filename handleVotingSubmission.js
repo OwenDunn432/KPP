@@ -41,7 +41,7 @@ async function handleSupabaseSignIn(response) {
 // HANDLE LOG OUT
 // ***********************************
 async function handleLogout() {
-  const { error } = await supabase.auth.signOut();
+  const { error } = await supabaseClient.auth.signOut();
 
   if (error) {
     console.error("Logout failed:", error.message);
